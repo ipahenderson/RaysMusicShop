@@ -71,4 +71,30 @@ Trumpet trumpet;
     public void getTypeName() {
     assertEquals("Brass", trumpet.getTypeName());
     }
+
+    @Test
+    public void trumpetHasValves(){
+    assertEquals(3, trumpet.getValveNumber());
+    }
+
+    @Test
+    public void pianoHasKeys(){
+    assertEquals(88, piano.getKeyNumber());
+    }
+
+    @Test
+    public void guitarHasStrings(){
+    assertEquals(6, guitar.getStringNumber());
+    }
+
+    @Test
+    public void fluteHasKey(){
+    assertEquals("C#", flute.getKey());
+    }
+
+    @Test
+    public void drumHasNumber(){
+    assertEquals(5, drumSet.getDrumNumber());
+    }
+
 }
