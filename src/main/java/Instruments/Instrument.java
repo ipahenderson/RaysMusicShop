@@ -1,6 +1,8 @@
 package Instruments;
 
-public abstract class Instrument {
+import Behaviours.ISell;
+
+public abstract class Instrument implements ISell {
 
     private InstrumentType type;
     private String colour;
@@ -48,5 +50,10 @@ public abstract class Instrument {
 
     public String getTypeName(){
         return this.type.getType();
+    }
+
+    public double calculateMarkUp(){
+        double markUp = (this.sellingPrice - this.buyingPrice);
+        return markUp;
     }
 }

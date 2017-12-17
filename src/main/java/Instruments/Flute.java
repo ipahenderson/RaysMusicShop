@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Flute extends Instrument{
+import Behaviours.IPlay;
+
+public class Flute extends Instrument implements IPlay{
 
     String key;
 
@@ -12,4 +14,11 @@ public class Flute extends Instrument{
     public String getKey() {
         return key;
     }
+
+    @Override
+    public String play() {
+        return "The " + this.getClass().getSimpleName() + " goes Doodie DoOOoo!";
+        }
+
 }
+

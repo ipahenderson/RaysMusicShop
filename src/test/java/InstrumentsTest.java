@@ -1,6 +1,7 @@
 import Instruments.*;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.notification.RunListener;
 
 import static org.junit.Assert.assertEquals;
 
@@ -96,5 +97,20 @@ Trumpet trumpet;
     public void drumHasNumber(){
     assertEquals(5, drumSet.getDrumNumber());
     }
+
+    @Test
+    public void instrumentCanPlay(){
+    assertEquals("The Trumpet goes Parp!", trumpet.play());
+    }
+
+
+    @Test
+    public void canCalculateMarkUp(){
+    assertEquals(70.00, trumpet.calculateMarkUp(), 0.01);
+    }
+
+
+
+
 
 }

@@ -1,6 +1,8 @@
 package Instruments;
 
-public class DrumSet extends Instrument{
+import Behaviours.IPlay;
+
+public class DrumSet extends Instrument implements IPlay{
 
     int drumNumber;
 
@@ -11,5 +13,10 @@ public class DrumSet extends Instrument{
 
     public int getDrumNumber() {
         return drumNumber;
+    }
+
+    @Override
+    public String play() {
+        return "The " + this.getClass().getSimpleName() + " goes Boom Boom Tsss!";
     }
 }

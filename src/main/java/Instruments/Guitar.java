@@ -1,7 +1,9 @@
 package Instruments;
 
 
-public class Guitar extends Instrument{
+import Behaviours.IPlay;
+
+public class Guitar extends Instrument implements IPlay{
 
     private int stringNumber;
 
@@ -12,5 +14,11 @@ public class Guitar extends Instrument{
 
     public int getStringNumber() {
         return stringNumber;
+    }
+
+    @Override
+    public String play() {
+        return "The " + this.getClass().getSimpleName() + " goes Twang!";
+
     }
 }

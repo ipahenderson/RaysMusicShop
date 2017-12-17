@@ -1,6 +1,8 @@
 package Instruments;
 
-public class Trumpet extends Instrument {
+import Behaviours.IPlay;
+
+public class Trumpet extends Instrument implements IPlay {
 
     int valveNumber;
 
@@ -11,5 +13,11 @@ public class Trumpet extends Instrument {
 
     public int getValveNumber() {
         return valveNumber;
+    }
+
+    @Override
+    public String play() {
+        return "The " + this.getClass().getSimpleName() + " goes Parp!";
+
     }
 }

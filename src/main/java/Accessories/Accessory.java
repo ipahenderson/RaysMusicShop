@@ -1,6 +1,8 @@
 package Accessories;
 
-public class Accessory {
+import Behaviours.ISell;
+
+public class Accessory implements ISell{
 
     String name;
     double buyingPrice;
@@ -34,5 +36,10 @@ public class Accessory {
 
     public void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
+    }
+
+    public double calculateMarkUp(){
+        double markUp = (this.sellingPrice - this.buyingPrice);
+        return markUp;
     }
 }
