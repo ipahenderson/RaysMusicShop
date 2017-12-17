@@ -52,6 +52,11 @@ public class ShopTest {
         assertEquals(7, shop.stockCount());
     }
 
+    @Test
+    public void canRemoveStock(){
+        shop.removeStock(trumpet);
+        assertEquals(5, shop.stockCount());
+    }
 
     @Test
     public void canGetTotalProfit(){

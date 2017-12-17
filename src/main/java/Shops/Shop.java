@@ -59,6 +59,17 @@ public class Shop {
         this.stock.add(item);
     }
 
+    public void removeStock(ISell item){
+        Object itemToRemove = new Object();
+        for (ISell itemToFind : stock) {
+            if (itemToFind == item) {
+                itemToRemove = item;
+            }
+        }
+        stock.remove(itemToRemove);
+    }
+
+
 
     public double calculateTotalProfit(){
         double totalProfit = 0;
